@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="mobile-number-input">Mobile Number:</label>
+    <input id="mobile-number-input" name="mobileNumber" type="tel" pattern="[0-9]{10,14}" placeholder="+1234567890" [(ngModel)]="mobileNumber" required>
+  </div>
+  <div>
+    <label for="message-input">Message:</label>
+    <textarea id="message-input" name="message" rows="4" [(ngModel)]="message" required></textarea>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
