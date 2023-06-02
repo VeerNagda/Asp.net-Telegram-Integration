@@ -3,3 +3,5 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+Telegram Integration/ClientApp/node_modules
+Telegram Integration/ClientApp/.angular

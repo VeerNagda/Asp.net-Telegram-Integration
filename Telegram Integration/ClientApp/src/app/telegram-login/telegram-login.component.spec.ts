@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TelegramLoginComponent } from './telegram-login.component';
+import {TelegramLoginComponent} from './telegram-login.component';
 
 describe('TelegramLoginComponent', () => {
   let component: TelegramLoginComponent;
@@ -8,9 +8,9 @@ describe('TelegramLoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TelegramLoginComponent ]
+      declarations: [TelegramLoginComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TelegramLoginComponent);
     component = fixture.componentInstance;

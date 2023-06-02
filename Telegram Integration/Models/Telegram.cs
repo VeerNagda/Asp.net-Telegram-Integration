@@ -1,6 +1,6 @@
 namespace Telegram_Integration.Models;
 
-public class TelegramLogin
+public class Telegram
 {
     public string? Message { get; set; }
 }

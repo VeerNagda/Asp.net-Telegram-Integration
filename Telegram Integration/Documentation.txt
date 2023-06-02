@@ -1,0 +1,43 @@
+Telegram API Integration Documentation
+
+
+References
+WTelegramClient
+Telegram User Login: https://stackoverflow.com/a/69579579/20450349, https://www.nuget.org/packages/WTelegramClient/
+FAQ: https://wiz0u.github.io/WTelegramClient/FAQ
+
+
+Message to frontend
+Message sent: When a message is sent through telegram
+Please Login Again: When authorization revoked
+Retry: Session unable to connect
+Enter a valid number: When input phone number does not exits while messaging
+Session Disconnected: Session Disconnected
+No session on going: Session Not connected
+Session token being used: When trying to join a live session with a saved token
+Session Created: New session Created
+PHONE_NUMBER_INVALID: Invalid number for login
+Login Successful: Login Successful
+
+
+Paths
+"/telegramintegration/login"       : used for calling login function
+"/telegramintegration/reconnect"   : using to reconnect to a session(used for development and testing)
+"/telegramintegration/disconnect"  : using to disconnect to a session(used for development and testing)
+"/telegramintegration/message"     : used to send message over telegram
+
+
+
+Extra references (not used!!!!)
+
+Create a bot:
+Reference: https://core.telegram.org/bots#how-do-i-create-a-bot
+Bot Father: https://t.me/BotFather
+Visit bot father and message /start to begin followed by /newBot. Reply all the prompts to get access token.
+Use /setDomain to sent the domain of application
+
+Create Telegram Login Widget:
+Reference: https://core.telegram.org/widgets/login#creating-a-login-url
+Note: Login widget doesn't work on localhost and thus ngrok needs to be configured to use it
+
+Telegram.Bot C# documentation: https://telegrambots.github.io/book/index.html

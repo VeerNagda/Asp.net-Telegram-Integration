@@ -1,4 +1,26 @@
-<form ngForm>
-  <label for="phone">Name: </label>
-  <input id="phone" type="number" [formControl]="phone">
+<form [formGroup]="eventForm" autocomplete="off">
+  <div class="form-field">
+    <label for="phoneNumber">Number:</label>
+    <input autocomplete="off" formControlName="phoneNumber" type="text" id="phoneNumber">
+    <button type="button" [disabled]="!eventForm.get('phoneNumber').value" [style.display]="eventForm.get('otp').value ? 'none' : 'block'" (click)="onsubmitNumber()">
+      Click
+    </button>
+  </div>
+  <div
+    *ngIf="this.telegram.length > 0 && this.telegram[0].message && (telegram[0].message.includes('verification_code') || telegram[0].message.includes('PHONE_CODE_INVALID') || telegram[0].message.includes('password') || telegram[0].message == null)">
+    <div class="form-field">
+      <label for="otp">OTP:</label>
+      <input autocomplete="off" formControlName="otp" type="text" id="otp">
+      <button type="button" [disabled]="!eventForm.get('otp').value" [style.display]="eventForm.get('password').value ? 'none' : 'block'"
+              (click)="onsubmitOtp()">Click
+      </button>
+    </div>
+    <div *ngIf="this.telegram.length > 0 && this.telegram[0].message && telegram[0].message.includes('password')">
+      <div class="form-field">
+        <label for="password">Password:</label>
+        <input autocomplete="off" formControlName="password" type="text" id="password">
+        <button type="button" (click)="onsubmitPassword()">Submit</button>
+      </div>
+    </div>
+  </div>
 </form>
